@@ -1,9 +1,9 @@
-(function(angular) {
+var express = require('express');
+var router = express.Router();
 
-  function avatarsController() {
-    console.log('In the avatars controller');
-
-    this.avatars = [
+router.get('/', function(req, res, next) {
+  var searchResults = {
+    results: [
       {
         name: 'eric',
         image: 'images/avatars/eric.png'
@@ -29,11 +29,11 @@
         image: 'images/avatars/yaw.png'
       }
     ]
-  }
+  };
 
-  angular.module('app')
-    .component('avatars', {
-      templateUrl: 'templates/avatars.html',
-      controller: avatarsController
-    });
-})(window.angular);
+  res
+    .type('json')
+    .send(searchResults);
+});
+
+module.exports = router;

@@ -1,8 +1,8 @@
-<div>
-  <ul>
-    <li ng-repeat="avatar in $ctrl.avatars track by $index">
-      <img src="{{avatar.image}}" />
-      {{avatar.name}}
-    </li>
-  </ul>
-</div>
+<ul class="avatars row" ng-if="$ctrl.avatars.length > 0" >
+  <li class="search-results-item col-sm-4" ng-repeat="avatar in $ctrl.avatars track by $index">
+    <figure class="avatar">
+      <img class="avatar-image" src="{{avatar.image}}" alt="{{avatar.name}}" />
+      <figcaption class="avatar-name">{{avatar.name}}</figcaption>
+    </figure>
+  </li>
+</ul>

@@ -8,23 +8,26 @@
 
   <link href="styles/reset.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+  <link href="styles/vendors/flexboxgrid.css" rel="stylesheet" type="text/css">
   <link href="styles/style.css" rel="stylesheet" />
-  <link href="styles/form.css" rel="stylesheet" />
+  <link href="styles/search.css" rel="stylesheet" />
+  <link href="styles/search-results.css" rel="stylesheet" />
+  <link href="styles/avatars.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
 
-
-
-<form>
-  <label for="search"><h1 class="searchLabel">People search</h1></label>
-  <input class="searchBox" type="text" id="search" />
-</form>
+<search></search>
 <avatars></avatars>
 
 <script src="scripts/angular.js"></script>
 <script src="scripts/app.js"></script>
-<script src="scripts/avatars.component.js"></script>
+<script src="scripts/controllers/search.controller.js"></script>
+<script src="scripts/controllers/avatar.controller.js"></script>
+
+<script src="scripts/services/search.service.js"></script>
+
+<script src="scripts/components/search.component.js"></script>
+<script src="scripts/components/avatars.component.js"></script>
 
 </body>
 </html>
