@@ -1,15 +1,15 @@
 (function(angular) {
 
   angular.module('app')
-    .controller('AvatarController', avatarsController);
+    .controller('SearchResultsController', avatarsController);
 
   function avatarsController(SearchService) {
     var self = this;
-    this.avatars = [];
+    this.results = [];
 
     SearchService.search()
       .then(function (results) {
-        self.avatars = results;
+        self.results = results;
       });
   }
 

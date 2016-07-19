@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   gulp.src('app/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/styles/'))
@@ -16,6 +16,6 @@ gulp.task('copy-css', function () {
 gulp.task('build', ['copy-css', 'styles']);
 
 //Watch task
-gulp.task('default',function() {
+gulp.task('default', function () {
   gulp.watch('app/styles/**/*.scss', ['styles']);
 });
