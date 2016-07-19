@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Find a name</title>
+
+  <link href="styles/reset.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+  <link href="styles/style.css" rel="stylesheet" />
+  <link href="styles/form.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+
+
+
+<form>
+  <label for="search"><h1 class="searchLabel">People search</h1></label>
+  <input class="searchBox" type="text" id="search" />
+</form>
+<avatars></avatars>
+
+<script src="scripts/angular.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/avatars.component.js"></script>
+
+</body>
+</html>

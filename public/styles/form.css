@@ -1,0 +1,9 @@
+.searchLabel {
+  color: #3599ff;
+  font-size: 18px;
+}
+
+.fieldBorder {
+  border: 2px solid #aaaaaa;
+  border-radius: 3px;
+}
