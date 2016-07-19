@@ -1,0 +1,16 @@
+{
+  "name": "name-search",
+  "version": "0.0.1",
+  "description": "Simple form to search for a person's avatar",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaindurham/name-search.git"
+  },
+  "author": "Iain Durham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iaindurham/name-search/issues"
+  },
+  "homepage": "https://github.com/iaindurham/name-search#readme"
+}
