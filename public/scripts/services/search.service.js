@@ -1,5 +1,4 @@
 (function(angular) {
-
   angular.module('app')
     .factory('SearchService', searchService);
 
@@ -10,13 +9,18 @@
 
     return service;
 
-    function performSearch() {
-      return $http.get('/search')
-        .then(function successCallback(response) {
-          return response.data.results;
-        }, function errorCallback() {
-          return [];
-        });
+    function performSearch(searchString) {
+      console.log(searchString)
+      return $http({
+        url: '/search',
+        method: 'GET',
+        params: {search: searchString}
+      })
+      .then(function successCallback(response) {
+        return response.data.results;
+      }, function errorCallback() {
+        return [];
+      });
     }
   }
 
