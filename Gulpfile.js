@@ -19,7 +19,15 @@ gulp.task('copy-js', function () {
   }).pipe(gulp.dest('public/scripts'));
 });
 
-gulp.task('build', ['copy-css', 'copy-js', 'styles']);
+gulp.task('copy-templates', function () {
+  return gulp.src(['app/templates/**/*.html'], {
+    base: 'app/templates'
+  }).pipe(gulp.dest('public/templates'));
+});
+
+gulp.task('copy-files', ['copy-css', 'copy-js', 'copy-templates'])
+
+gulp.task('build', ['copy-files', 'styles']);
 
 //Watch task
 gulp.task('default', function () {
