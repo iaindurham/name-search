@@ -8,14 +8,20 @@ gulp.task('styles', function () {
 });
 
 gulp.task('copy-css', function () {
-  return gulp.src(['app/styles/css/**/*'], {
+  return gulp.src(['app/styles/css/**/*.css'], {
     base: 'app/styles/css'
   }).pipe(gulp.dest('public/styles'));
 });
 
-gulp.task('build', ['copy-css', 'styles']);
+gulp.task('copy-js', function () {
+  return gulp.src(['app/scripts/**/*.js'], {
+    base: 'app/scripts'
+  }).pipe(gulp.dest('public/scripts'));
+});
+
+gulp.task('build', ['copy-css', 'copy-js', 'styles']);
 
 //Watch task
 gulp.task('default', function () {
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/**/*', ['build']);
 });

@@ -10,7 +10,6 @@
     return service;
 
     function performSearch(searchString) {
-      console.log(searchString)
       return $http({
         url: '/search',
         method: 'GET',
