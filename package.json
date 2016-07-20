@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/iaindurham/name-search#readme",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "start-dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "angular": "^1.5.7",
@@ -28,6 +29,7 @@
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2"
   }
 }
