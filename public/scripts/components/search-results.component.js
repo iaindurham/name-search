@@ -1,7 +1,9 @@
 (function(angular) {
   angular.module('app')
     .component('searchResults', {
-      templateUrl: 'templates/search-results.html',
-      controller: 'SearchResultsController'
+      bindings: {
+        results: '<'
+      },
+      templateUrl: 'templates/search-results.html'
     });
 })(window.angular);

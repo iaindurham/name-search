@@ -1,7 +1,7 @@
 (function(angular) {
   angular.module('app')
-    .component('search', {
+    .component('searchBox', {
       templateUrl: 'templates/search.html',
-      controller: 'SearchController'
+      controller: 'SearchBoxController'
     });
 })(window.angular);

@@ -16,17 +16,19 @@
 </head>
 <body ng-app="app">
 
-<search></search>
-<search-results></search-results>
+<div ng-controller="PeopleSearchController as ctrl">
+  <search-box></search-box>
+  <search-results results="ctrl.searchResults"></search-results>
+</div>
 
 <script src="scripts/angular.js"></script>
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/search.controller.js"></script>
-<script src="scripts/controllers/search-results.controller.js"></script>
+<script src="scripts/controllers/people-search.controller.js"></script>
+<script src="scripts/controllers/search-box.controller.js"></script>
 
 <script src="scripts/services/search.service.js"></script>
 
-<script src="scripts/components/search.component.js"></script>
+<script src="scripts/components/search-box.component.js"></script>
 <script src="scripts/components/search-results.component.js"></script>
 <script src="scripts/components/avatar.component.js"></script>
 

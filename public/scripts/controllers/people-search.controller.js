@@ -1,15 +1,14 @@
 (function(angular) {
 
   angular.module('app')
-    .controller('SearchResultsController', avatarsController);
+    .controller('PeopleSearchController', PeopleSearchController);
 
-  function avatarsController(SearchService) {
+  function PeopleSearchController(SearchService) {
     var self = this;
-    this.results = [];
 
     SearchService.search()
       .then(function (results) {
-        self.results = results;
+        self.searchResults = results;
       });
   }
 
