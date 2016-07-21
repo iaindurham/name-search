@@ -1,5 +1,8 @@
-<ul class="avatars row" ng-if="$ctrl.results.length > 0" >
-  <li class="search-results-item col-sm-4" ng-repeat="result in $ctrl.results track by $index">
+<ul class="avatars row" ng-if="$ctrl.results.length > 0">
+  <li class="search-results-item col-sm-4" ng-repeat="result in $ctrl.results track by result.id">
     <avatar user="result"></avatar>
   </li>
 </ul>
+<p class="no-results" ng-if="$ctrl.results.length === 0">
+  No results found
+</p>
