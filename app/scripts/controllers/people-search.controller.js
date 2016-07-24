@@ -4,8 +4,11 @@
 
   function PeopleSearchController($rootScope, SearchService) {
     var self = this;
+    this.searchResults = [];
 
     this.performSearch = function (searchString) {
+      searchString = searchString || '';
+
       SearchService.search(searchString)
         .then(function (results) {
           self.searchResults = results;
@@ -17,7 +20,5 @@
     });
 
     this.performSearch();
-
   }
-
 })(window.angular);
