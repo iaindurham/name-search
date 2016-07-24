@@ -1,7 +1,7 @@
 {
   "name": "name-search",
   "version": "0.0.1",
-  "description": "Simple form to search for a person's avatar",
+  "description": "Simple form to search for a person's avatar using Angular and Express",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www",
+    "build": "gulp build",
     "test": "karma start"
   },
   "dependencies": {
